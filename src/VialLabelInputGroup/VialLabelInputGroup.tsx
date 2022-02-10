@@ -1,8 +1,8 @@
 import { Grid } from "@mui/material";
 import React from "react";
 import { PositionSelect } from "../PositionSelect/PositionSelect";
-import { LabelInputGroupProps } from "../PropsTypes/LabelinputGroupProps";
-function VialLabelInputGroup(props: LabelInputGroupProps) {
+import { VialLabelInputGroupProps } from "../VialLabelInputGroup/VialLabelInputGroupProps";
+export function VialLabelInputGroup(props: VialLabelInputGroupProps) {
   const startPositionInputSelect =
     props.vialLabelInputGroups[props.vialLabelInputGroupNumber]
       .startPositionSelectInfo;

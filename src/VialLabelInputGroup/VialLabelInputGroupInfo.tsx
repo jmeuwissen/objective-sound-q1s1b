@@ -1,4 +1,9 @@
-class VialLabelInputGroupInfo {
+import {
+  EndPositionSelectInfo,
+  StartPositionSelectInfo
+} from "../PositionSelect/PositionSelectInfo";
+
+export class VialLabelInputGroupInfo {
   index: number;
   startPositionSelectInfo: StartPositionSelectInfo;
   endPositionSelectInfo: EndPositionSelectInfo;

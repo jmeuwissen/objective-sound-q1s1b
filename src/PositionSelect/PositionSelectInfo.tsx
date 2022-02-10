@@ -1,5 +1,5 @@
 export class PositionSelectInfo {
-  index: number;
+  inputGroupIndex: number;
   positionValue: number;
   positionOptions: string[];
   startOrEnd: string;
@@ -7,7 +7,7 @@ export class PositionSelectInfo {
     if (new.target === PositionSelectInfo) {
       throw new Error("Can't instantiate abstract class");
     }
-    this.index = index;
+    this.inputGroupIndex = index;
     this.positionValue = 0;
     this.positionOptions = indexList;
     this.startOrEnd = "";
@@ -16,10 +16,10 @@ export class PositionSelectInfo {
     return this.startOrEnd + "ing position";
   }
   getLabelId(): string {
-    return this.startOrEnd + "-position-select-label-" + this.index;
+    return this.startOrEnd + "-position-select-label-" + this.inputGroupIndex;
   }
   getSelectId(): string {
-    return this.startOrEnd + "-position-select-element-" + this.index;
+    return this.startOrEnd + "-position-select-element-" + this.inputGroupIndex;
   }
   getSelectLabel(): string {
     return this.startOrEnd;

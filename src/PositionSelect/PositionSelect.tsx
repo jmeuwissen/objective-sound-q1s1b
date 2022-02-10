@@ -6,15 +6,16 @@ import {
   SelectChangeEvent
 } from "@mui/material";
 import React from "react";
-import { PositionSelectInfo } from "../PositionSelectInfo/PositionSelectInfo";
-import { positionSelectProps } from "../PropsTypes/PositionSelectProps";
+import { VialLabelInputGroupInfo } from "../VialLabelInputGroup/VialLabelInputGroupInfo";
+import { PositionSelectInfo } from "./PositionSelectInfo";
+import { PositionSelectProps } from "./PositionSelectProps";
 
 function selectChangeHandlerFactory(
   vialLabelInputGroupNumber: number,
   positionSelectInfo: PositionSelectInfo,
-  vialInputGroupStates: VialInputGroupState[],
+  vialInputGroupStates: VialLabelInputGroupInfo[],
   setVialLabelGroupInputs: React.Dispatch<
-    React.SetStateAction<VialInputGroupState[]>
+    React.SetStateAction<VialLabelInputGroupInfo[]>
   >
 ) {
   return function executeOnEvent(event: SelectChangeEvent<number>) {
@@ -37,7 +38,7 @@ function selectChangeHandlerFactory(
   };
 }
 
-export function PositionSelect(props: positionSelectProps) {
+export function PositionSelect(props: PositionSelectProps) {
   return (
     <FormControl fullWidth>
       <InputLabel id={props.positionSelectInfo.getLabelId()}>

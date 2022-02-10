@@ -1,14 +1,15 @@
-import { PositionSelectInfo } from "../PositionSelectInfo/PositionSelectInfo";
-import { LabelInputGroupProps } from "./LabelinputGroupProps";
+import { VialLabelInputGroupInfo } from "../VialLabelInputGroup/VialLabelInputGroupInfo";
+import { VialLabelInputGroupProps } from "../VialLabelInputGroup/VialLabelInputGroupProps";
+import { PositionSelectInfo } from "./PositionSelectInfo";
 
-export class positionSelectProps extends LabelInputGroupProps {
+export class PositionSelectProps extends VialLabelInputGroupProps {
   positionSelectInfo: PositionSelectInfo;
   constructor(
     vialLabelInputGroupNumber: number,
-    vialInputGroupState: VialInputGroupState[],
+    vialInputGroupState: VialLabelInputGroupInfo[],
     positionSelectInfo: PositionSelectInfo,
     setVialLabelInputGroups: React.Dispatch<
-      React.SetStateAction<VialInputGroupState[]>
+      React.SetStateAction<VialLabelInputGroupInfo[]>
     >,
     indexList: string[]
   ) {

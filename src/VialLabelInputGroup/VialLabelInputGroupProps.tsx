@@ -1,15 +1,17 @@
-export class LabelInputGroupProps {
+import { VialLabelInputGroupInfo } from "./VialLabelInputGroupInfo";
+
+export class VialLabelInputGroupProps {
   vialLabelInputGroupNumber: number;
-  vialLabelInputGroups: VialInputGroupState[];
+  vialLabelInputGroups: VialLabelInputGroupInfo[];
   setVialLabelInputGroups: React.Dispatch<
-    React.SetStateAction<VialInputGroupState[]>
+    React.SetStateAction<VialLabelInputGroupInfo[]>
   >;
   indexList: string[];
   constructor(
     vialLabelInputGroupNumber: number,
-    vialInputGroupState: VialInputGroupState[],
+    vialInputGroupState: VialLabelInputGroupInfo[],
     setVialLabelInputGroups: React.Dispatch<
-      React.SetStateAction<VialInputGroupState[]>
+      React.SetStateAction<VialLabelInputGroupInfo[]>
     >,
     indexList: string[]
   ) {

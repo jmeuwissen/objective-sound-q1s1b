@@ -1,0 +1,3 @@
+class LabelLineInputInfo {
+  constructor(parameters) {}
+}

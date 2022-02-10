@@ -6,6 +6,8 @@ import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
 import { Container, FormGroup, Grid } from "@mui/material";
+import { VialLabelInputGroupInfo } from "./VialLabelInputGroup/VialLabelInputGroupInfo";
+import { VialLabelInputGroup } from "./VialLabelInputGroup/VialLabelInputGroup";
 
 const { useState, Fragment } = React;
 
@@ -27,12 +29,12 @@ export default function App() {
   const indexList: string[] = getIndexlist();
   const [vialLabelGroupCount, setCount] = useState(1);
   const [vialLabelInputGroups, setVialLabelInputGroups] = useState([
-    new VialInputGroupState(0, indexList)
+    new VialLabelInputGroupInfo(0, indexList)
   ]);
 
   const addLabelInputGroupHandler = () => {
     const newArr = [...vialLabelInputGroups];
-    newArr.push(new VialInputGroupState(vialLabelGroupCount, indexList));
+    newArr.push(new VialLabelInputGroupInfo(vialLabelGroupCount, indexList));
     setVialLabelInputGroups(newArr);
     setCount(vialLabelGroupCount + 1);
     console.log(vialLabelGroupCount);
